@@ -13,7 +13,7 @@ const About = () => {
               <p className="text-xl font-bold text-slate-800">이주형 | Lee Juhyeong</p>
               <div className="text-slate-600 leading-relaxed font-medium">
                 <p>목원대학교 컴퓨터공학과 학사</p>
-                <p className="text-sm text-slate-500 font-normal">(2022.03 ~ 2026.02 졸업 예정)</p>
+                <p className="text-sm text-slate-500 font-normal">(2022.03 ~ 2026.02 졸업)</p>
               </div>
             </div>
 
@@ -89,7 +89,7 @@ const About = () => {
         {/* About.jsx 내 활동 내역 섹션 예시 */}
         <div className="flex items-start gap-3">
           <div className="flex-1">
-            <p className="text-sm font-bold text-slate-800">kt cloud TECH UP - 클라우드 네이티브 과정</p>
+            <p className="text-sm font-bold text-slate-800">kt cloud TECH UP - 프론트엔드 과정</p>
             <p className="text-xs text-slate-500">2025.09 ~ 2026.01 참여</p>
           </div>
         </div>
