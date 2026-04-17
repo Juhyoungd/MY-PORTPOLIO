@@ -2,3 +2,22 @@
   /* 여기에 커스텀 테마를 설정할 수 있습니다 */
 }
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: pageEnter 260ms ease-out;
+}

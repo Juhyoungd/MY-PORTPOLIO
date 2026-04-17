@@ -86,6 +86,13 @@ const About = () => {
             </li>
           </ul>
         </div>
+        {/* About.jsx 내 활동 내역 섹션 예시 */}
+        <div className="flex items-start gap-3">
+          <div className="flex-1">
+            <p className="text-sm font-bold text-slate-800">kt cloud TECH UP - 클라우드 네이티브 과정</p>
+            <p className="text-xs text-slate-500">2025.09 ~ 2026.01 참여</p>
+          </div>
+        </div>
       </div>
     </section>
   );
