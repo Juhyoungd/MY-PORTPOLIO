@@ -3,20 +3,14 @@ import { Link, Navigate, Route, Routes, useLocation, useParams } from 'react-rou
 import Hero from './sections/Hero';
 import About from './sections/About';
 import ProjectCard from './components/ProjectCard';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import { PROJECT_DATA } from './data/projects';
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-blue-100">
-      {/* Navigation */}
-      <nav className="p-6 flex justify-between items-center bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
-        <Link to="/" className="text-xl font-black tracking-tighter text-blue-600">JUHYEONG.DEV</Link>
-        <div className="flex space-x-6 font-medium text-xs uppercase tracking-widest">
-          <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
-          <a href="#projects" className="hover:text-blue-600 transition-colors">Projects</a>
-        </div>
-      </nav>
-
+    <div className="min-h-screen bg-linear-to-b from-white to-blue-100 bg-fixed text-slate-900 font-sans selection:bg-blue-100">
+      <Navbar />
       <Hero />
       <About />
 
@@ -30,14 +24,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-20 text-center border-t border-slate-100 bg-slate-50/50">
-        <p className="text-sm font-medium text-slate-400">© 2026 Lee Juhyeong. All rights reserved.</p>
-        <div className="mt-4 flex justify-center gap-6 text-[10px] font-bold text-blue-600 uppercase tracking-widest">
-           <a href="https://github.com/Juhyoungd" className="hover:underline">GitHub</a>
-           <span className="cursor-pointer hover:underline">Contact</span>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

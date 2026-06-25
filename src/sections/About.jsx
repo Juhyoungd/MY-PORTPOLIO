@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-slate-50 px-6">
+    <section id="about" className="py-20 px-6">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         <div className="space-y-8">
           <div className="space-y-6">
@@ -45,20 +45,12 @@ const About = () => {
           </div>
 
           {/* 기술 스택 */}
-          <div id="skills" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div id="skills" className="grid grid-cols-1 gap-4">
             <div className="p-4 bg-white rounded-xl shadow-sm border border-slate-100">
               <p className="font-bold text-blue-600 mb-2 text-xs uppercase tracking-tight">Frontend</p>
               <div className="flex flex-wrap gap-1.5">
                 {['React', 'JS', 'Tailwind', 'Vite'].map(skill => (
                   <span key={skill} className="text-[9px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded font-bold">{skill}</span>
-                ))}
-              </div>
-            </div>
-            <div className="p-4 bg-white rounded-xl shadow-sm border border-slate-100">
-              <p className="font-bold text-green-600 mb-2 text-xs uppercase tracking-tight">Mobile</p>
-              <div className="flex flex-wrap gap-1.5">
-                {['React Native', 'Expo'].map(skill => (
-                  <span key={skill} className="text-[9px] bg-green-50 text-green-700 px-2 py-0.5 rounded font-bold">{skill}</span>
                 ))}
               </div>
             </div>
@@ -78,7 +70,7 @@ const About = () => {
             </li>
             <li className="flex gap-3">
               <span className="text-blue-500 font-bold">02</span>
-              <span>모바일 네이티브 기능(Audio, Camera) 최적화 구현</span>
+              <span>반응형 레이아웃과 크로스 브라우징을 고려한 화면 구현</span>
             </li>
             <li className="flex gap-3">
               <span className="text-blue-500 font-bold">03</span>
