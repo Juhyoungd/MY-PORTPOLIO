@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom';
 import Hero from './sections/Hero';
 import About from './sections/About';
+import Skills from './sections/Skills';
+import Awards from './sections/Awards';
 import ProjectCard from './components/ProjectCard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -13,6 +15,8 @@ const HomePage = () => {
       <Navbar />
       <Hero />
       <About />
+      <Skills />
+      <Awards />
 
       {/* Project Section */}
       <section id="projects" className="py-24 px-6 max-w-6xl mx-auto">

@@ -7,6 +7,8 @@ const Navbar = () => {
       <Link to="/" className="text-xl font-black tracking-tighter text-blue-600">LEE JU HYEONG</Link>
       <div className="flex space-x-6 font-medium text-xs uppercase tracking-widest">
         <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
+        <a href="#skills" className="hover:text-blue-600 transition-colors">Skills</a>
+        <a href="#awards" className="hover:text-blue-600 transition-colors">Awards</a>
         <a href="#projects" className="hover:text-blue-600 transition-colors">Projects</a>
         <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
       </div>

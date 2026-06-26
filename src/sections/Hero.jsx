@@ -1,4 +1,3 @@
-// sections/Hero.jsx 수정 제안
 import React from 'react';
 
 const Hero = () => {
@@ -6,7 +5,7 @@ const Hero = () => {
     <header className="relative min-h-screen flex flex-col justify-center px-6 max-w-5xl mx-auto overflow-hidden">
       {/* 배경 장식 요소: 프론트엔드 감성 추가 */}
       <div className="absolute -top-10 -right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50 -z-10 animate-pulse"></div>
-      
+
       <div className="space-y-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100 text-blue-600 rounded-full text-xs font-bold tracking-wider uppercase">
           <span className="relative flex h-2 w-2">
@@ -18,7 +17,7 @@ const Hero = () => {
 
         <h2 className="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tighter">
           화면에 생명을 불어넣는 <br/>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-cyan-500 to-indigo-600">
             프론트엔드 개발자,
           </span> <br/>
           이주형입니다.
