@@ -1,4 +1,10 @@
 // data/projects.js
+// 각 프로젝트에 실제 스크린샷이 있다면 아래처럼 images 배열을 추가하세요. (여러 장 가능)
+// images: [
+//   { src: "/projects/nextstep-main.png", caption: "메인 워크스페이스 화면" },
+//   { src: "/projects/nextstep-community.png", caption: "커뮤니티 페이지" },
+// ]
+// (이미지 파일은 public/projects/ 폴더에 넣으면 됩니다. images가 없으면 그라데이션 배너로 대체됩니다.)
 export const PROJECT_DATA = [
   {
     id: 1,
@@ -58,55 +64,74 @@ export const PROJECT_DATA = [
   {
     id: 2,
     title: "NEXTSTEP_KT",
-    korTitle: "개발자 학습 로드맵 시각화·관리·공유 플랫폼",
-    subtitle: "AI 기반 기술 추천 & 트렌드 분석 플랫폼",
-    description: "개인 워크스페이스에서 기술 로드맵을 구성하고 공유/피드백까지 연결하는 Next.js 기반 플랫폼입니다.",
+    korTitle: "IT 직군을 위한 로드맵 기반 학습·프로젝트 관리 플랫폼",
+    subtitle: "AI 기반 기술 추천 & 커뮤니티 플랫폼",
+    description: "학습 로드맵 설계부터 커뮤니티 공유, AI 기술 추천까지 하나의 흐름으로 연결하는 Next.js 기반 플랫폼입니다.",
+    images: [
+      { src: "/projects/nextstep-main.png", caption: "메인 워크스페이스 - 로드맵 노드 편집" },
+      { src: "/projects/nextstep-community-list.png", caption: "커뮤니티 - 8개 분야별 게시판" },
+      { src: "/projects/nextstep-community-board.png", caption: "분야별 커뮤니티 게시글 목록" },
+      { src: "/projects/nextstep-admin-stats.png", caption: "관리자 - 게시판별 통계 대시보드" },
+      { src: "/projects/nextstep-admin-approval.png", caption: "관리자 - 기술 스택 요청 승인/거절" },
+      { src: "/projects/nextstep-admin-stacks.png", caption: "관리자 - 기술 스택 관리" },
+      { src: "/projects/nextstep-quest.png", caption: "퀘스트 - 데일리 미션으로 포인트 획득" },
+      { src: "/projects/nextstep-store.png", caption: "상점 - 포인트로 프로필 아이템 구매" },
+      { src: "/projects/nextstep-profile.png", caption: "마이페이지 - 프로필 커스터마이징" },
+    ],
     period: "2024.07 ~ 2024.09",
     repositoryLabel: "GitHub Repository",
     paperTitle: "Project README",
-    introduction: "개발자의 학습 로드맵을 시각화·관리·공유할 수 있도록 설계된 실전 아키텍처 프로젝트",
+    introduction: "IT 직군은 학습 범위가 넓고 변화가 빨라 방향을 잡기 어렵다는 문제에서 출발해, 로드맵 생성·진행 관리·개인 워크스페이스를 하나로 묶어 학습과 프로젝트를 함께 관리할 수 있도록 설계한 실전 아키텍처 프로젝트",
     details: [
-      "사용자별 워크스페이스를 생성하고 기술(Tech) 기반 로드맵을 트리 구조로 구성",
-      "로드맵 진행 상태를 관리하고 완료 여부를 체크할 수 있음",
-      "워크스페이스 공유 게시글, 좋아요, 댓글/대댓글로 커뮤니티 피드백 흐름 제공"
+      "사용자별 워크스페이스에서 기술(Tech) 노드를 연결해 로드맵을 설계하고 진행 상태를 관리",
+      "노드를 선택하면 AI가 후속 학습 노드를 추천하고, 검색어 기반으로도 연관 기술을 추천",
+      "완성한 워크스페이스를 프론트엔드·백엔드·AI 등 분야별 커뮤니티에 게시해 공유·좋아요·댓글·가져오기(포크)까지 지원",
+      "퀘스트로 모은 포인트를 상점에서 프로필 커스터마이징 아이템으로 교환하는 등 지속 참여를 유도하는 요소 포함"
     ],
-    teamInfo: "구성 : 프론트엔드/백엔드/DB 4인 협업",
+    teamInfo: "구성 : 프론트엔드/백엔드/DB 4인 협업 (AI·뉴스 / 메인 워크스페이스 / 회원·상점 / 커뮤니티·관리자 영역을 각자 전담)",
     imageCaption: "Next Step 메인 화면 스크린샷",
     background: [
-      "개발자 학습은 기록에서 끝나지 않고 공유/피드백 기반 성장으로 확장될 필요가 있음",
-      "학습 과정을 시각적으로 구조화하고 지속 관리할 수 있는 개인 워크스페이스 도구가 필요했음"
+      "IT 직군은 학습 범위가 넓고 트렌드 변화가 빨라, 무엇을 어떤 순서로 학습해야 할지 방향을 잡기 어려운 문제가 있음",
+      "개인의 학습 과정과 프로젝트 진행 상황을 체계적으로 관리할 도구가 부족해 학습 흐름과 이력이 파편화되는 문제가 있었음"
     ],
     implementation: [
-      "Next.js(App Router) + TypeScript 기반 구조에서 Feature-Sliced Design(FSD) 도메인 분리 적용",
+      "Next.js(App Router) + TypeScript 기반 구조에서 Feature-Sliced Design(FSD)으로 app/widgets/features/shared 계층을 분리해 협업 시 폴더 컨벤션 충돌을 최소화",
       "React Query, Zustand를 활용해 비동기 데이터와 클라이언트 상태를 분리 관리",
-      "Supabase(PostgreSQL) + RLS로 사용자/워크스페이스/로드맵/게시글/댓글 데이터 모델 설계",
-      "프로필 장식 아이템, 주문 시스템 등 커스터마이징 요소와 커뮤니티 기능을 함께 제공",
-      "Gemini, Claude를 활용한 AI 기능과 트렌드 분석 흐름을 서비스에 통합"
+      "Supabase(PostgreSQL) + RLS로 사용자/워크스페이스/로드맵/게시글/댓글 등 핵심 데이터 모델 설계",
+      "로드맵을 단순 트리가 아닌 DAG(방향성 비순환 그래프) 구조로 설계해, 여러 선행 지식이 하나의 개념으로 수렴하는 학습 구조까지 표현 가능하도록 구현",
+      "OpenAI API 기반 AI 기술 추천과 분야별 뉴스 큐레이션 기능을 서비스에 통합",
+      "퀘스트(행동 기반 포인트)와 상점(악세서리·테두리·칭호·닉네임) 시스템으로 재방문을 유도하는 게이미피케이션 요소 도입"
     ],
     outcomes: [
-      "NEXTSTEP 서비스 구현 및 배포 완료",
-      "개인 학습 관리 + 커뮤니티 공유를 결합한 학습 플랫폼 구조 검증",
-      "실전 아키텍처(FSD, RLS, App Router) 기반 협업 개발 경험 확보"
+      "학습과 프로젝트 관리를 하나의 흐름으로 연결한 NEXTSTEP 서비스 구현 및 배포 완료",
+      "로드맵 공유 기반 커뮤니티 상호작용과 게이미피케이션 요소로 사용자 재방문을 유도하는 서비스 구조 검증",
+      "트리 구조의 한계를 DAG로 해결하는 등 실전 아키텍처(FSD, RLS, App Router) 기반 협업 개발 경험 확보"
     ],
     contributions: [
       {
-        title: "로드맵/워크스페이스 기능 구현",
+        title: "커뮤니티 페이지 설계 및 성능 최적화",
         items: [
-          "기술 로드맵 트리 구조 관리 및 진행 상태 UI/로직 구현",
-          "워크스페이스 화면 구성과 데이터 흐름 정리",
-          "상태 관리 및 API 연동 패턴을 기능 단위로 분리"
+          "프론트엔드·백엔드·AI·인프라·클라우드·보안·PM·디자인 8개 분야별 커뮤니티 게시판 구조를 설계해 워크스페이스 공개 게시·탐색 흐름 구현",
+          "게시글·댓글·대댓글 상호작용을 트리 구조로 설계하고, 다른 사용자의 워크스페이스를 '내 워크스페이스로 가져오기'(포크) 기능까지 구현해 로드맵 재사용 흐름 완성",
+          "React Query 캐싱 전략과 낙관적 업데이트(Optimistic Update)를 적용해 좋아요·댓글 액션의 체감 반응 속도 개선",
+          "불필요한 리렌더링을 최소화한 리스트 렌더링 구조로 게시글이 많아져도 끊김 없는 스크롤 경험 확보"
         ]
       },
       {
-        title: "커뮤니티 및 서비스 안정화",
+        title: "관리자 페이지 단독 설계 및 구현",
         items: [
-          "게시글/댓글/대댓글 기반 공유 기능 및 상호작용 흐름 구현",
-          "배포 및 QA 과정에서 사용자 시나리오 기반 버그 수정/개선"
+          "회원·계정 상태 관리, 게시글/댓글 통합 모니터링, 신고 처리까지 아우르는 관리자 콘솔을 전체 설계",
+          "게시판별 게시글·댓글·좋아요 현황을 한눈에 파악할 수 있는 통계 대시보드 화면 구현",
+          "사용자가 요청한 기술 스택을 관리자가 검토해 승인·거절·수정할 수 있는 워크플로우를 설계해 커뮤니티 데이터 품질 관리 체계 구축",
+          "Supabase service role key가 기능 구분 없이 무분별하게 쓰이며 과도한 권한이 노출될 수 있는 문제를 직접 진단하고, users 관련 로직에 한해서만 service role key를 쓰도록 범위를 재설계해 최소 권한 원칙 기반 보안 정책을 주도적으로 수립",
+          "Supabase RLS(Row Level Security) 기반으로 관리자/일반 사용자 역할별 데이터 접근 권한을 세분화해 안전한 권한 체계 구축"
         ]
       }
     ],
-    tags: ["Next.js", "TypeScript", "Supabase", "RLS", "React Query", "Zustand", "FSD", "Tailwind CSS"],
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "React Query", "Axios", "Zustand", "Firebase (회원)", "Supabase (DB)"],
+    tools: ["OpenAI API", "Figma", "GitHub"],
     color: "green",
-    link: "https://github.com/Juhyoungd/NEXTSTEP_KT_2025"
+    link: "https://github.com/Juhyoungd/NEXTSTEP_KT_2025",
+    demoLink: "https://nextstep-kt-2025.vercel.app/"
   },
 ];
